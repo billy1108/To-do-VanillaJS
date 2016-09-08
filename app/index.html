@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="css/main.css" ></link>
+  <script src="libs/polyfill.js"></script>
+  <script src="libs/system.js"></script>
+  <script>
+    System.config({
+      packages: {
+        js: {
+          format: 'register',
+          defaultExtension: 'js'
+        },
+      },
+      meta: {
+        'js/*': {format: 'cjs'}
+      }
+    });
+    System.import('js/main.js');
+</script>
+</head>
+<body>
+  <header class="main-header">
+    <h1>Ninja<span>todo</span></h1>
+    <h2>A simple to-do list developed with ES6</h2>
+  </header>
+
+  <section class="app-insert">
+    <input type="text" name="task" placeholder="Insert your task here...">
+  </section>
+
+  <section class="app-list">
+    <ul></ul>
+  </section>  
+</body>
+</html>
