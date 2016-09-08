@@ -30,8 +30,7 @@ gulp.task('serve', ['build'], function() {
     gulp.src('build')
         .pipe(webserver({
             open: true,
-            host:  process.env.IP || "0.0.0.0",
-            port: process.env.PORT || 3000
+            port: 3000
         }));
 });
 
